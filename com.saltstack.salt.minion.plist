@@ -10,7 +10,7 @@
     <true/>
     <key>ProgramArguments</key>
     <array>
-        <string>/usr/local/salt/bin/salt-minion</string>
+        <string>/usr/local/salt/bin/start-salt-minion.sh</string>
     </array>
     <key>SoftResourceLimits</key>
     <dict>
