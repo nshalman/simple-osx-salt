@@ -33,6 +33,8 @@ have_xcode || install_xcode
 rm -rf $SALT_DIR
 virtualenv $SALT_DIR
 $SALT_DIR/bin/pip install salt || rm -rf /usr/local/salt
-cp com.saltstack.salt.minion.plist $SALT_DIR/lib
+cp com.saltstack.salt.minion.plist $SALT_DIR/lib/
+cp start-salt-minion.sh $SALT_DIR/bin/
+chmod 744 $SALT_DIR/bin/start-salt-minion.sh
 zip -r salt.zip /usr/local/salt
 chown $SUDO_USER salt.zip
