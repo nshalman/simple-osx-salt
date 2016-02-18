@@ -10,5 +10,5 @@ grep -q "^${MINION_ID_STRING}$" /etc/salt/minion && exec /usr/local/salt/bin/sal
 rm -rf /etc/salt/pki
 mv /etc/salt/minion{,.bak}
 sed -e '/^id/d' /etc/salt/minion.bak > /etc/salt/minion
-echo "id: mac-${SERIAL_NUMBER}" >> /etc/salt/minion
+echo "${MINION_ID_STRING}" >> /etc/salt/minion
 exec /usr/local/salt/bin/salt-minion
